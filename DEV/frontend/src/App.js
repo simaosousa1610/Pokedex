@@ -1,23 +1,28 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+// how to import the Pokedex image from the public folder
+import logo from './pokedex.png';
+
 import './App.css';
 
 function App() {
+  const [searchTerm, setSearchTerm] = useState('');
+
+  const handleSearchChange = (event) => {
+    setSearchTerm(event.target.value);
+  };
+
+  const handleSearchSubmit = () => {
+    console.log(`Searching for ${searchTerm}`);
+    // Here you can add the logic to perform the search
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <img src={logo} className="App-logo" alt="logo"/>
+      <div className="search-box">
+        <input type="text" value={searchTerm} onChange={handleSearchChange} />
+        <button onClick={handleSearchSubmit}>Search</button>
+      </div>
     </div>
   );
 }
