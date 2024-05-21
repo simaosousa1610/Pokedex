@@ -1,6 +1,9 @@
 .App {
   text-align: center;
   background-color: rgb(69, 71, 109);
+  color: white;
+  font-family: Arial, sans-serif;
+  padding: 20px;
 }
 
 body {
@@ -13,13 +16,46 @@ body {
 }
 
 .search-box {
+  width: 300px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+.search-button {
+  margin-left: 10px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(255, 64, 64);
+  color: white;
+  cursor: pointer;
+}
+
+.results {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  margin-top: 20px;
+  color: white;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
   margin-top: 20px;
 }
 
-.title {
-  font-size: 2rem;
+.buttons button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(255, 64, 64);
   color: white;
+  cursor: pointer;
+}
+
+.pokemon-sprite {
+  width: 200px;
+  height: 200px;
 }
