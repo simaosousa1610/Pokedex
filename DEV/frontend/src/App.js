@@ -14,7 +14,7 @@ function App() {
 
   const handleSearchSubmit = async (term) => {
     setIsLoading(true);
-    const response = await fetch('http://localhost:5000/search', {
+    const response = await fetch('http://localhost:5000/api/search', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

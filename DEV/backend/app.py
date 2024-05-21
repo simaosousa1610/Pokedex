@@ -4,10 +4,14 @@ from flask_cors import CORS
 import Levenshtein as levenshtein
 import requests
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='../build', static_url_path='/')
 CORS(app)  # This will enable CORS for all routes
 
 poke_data = dict()
+
+@app.route('/')
+def index():
+    return app.send_static_file('index.html')
 
 def get_pokemon_data():
     global poke_data
@@ -33,7 +37,7 @@ def find_closest_match(search_term):
             closest_match = key
     return closest_match
 
-@app.route('/search', methods=['POST'])
+@app.route('/api/search', methods=['POST'])
 def search():
     data = request.get_json()
     
