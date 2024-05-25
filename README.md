@@ -134,7 +134,7 @@ The application includes automated tests for key features. To run the tests:
 1. **Backend tests**:
    \`\`\`sh
    cd DEV/backend
-   pytest
+   python pytest
    \`\`\`
 
 2. **Frontend tests**:
