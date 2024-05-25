@@ -60,7 +60,7 @@ function App() {
     <div className="App">
       <img src={logo} className="App-logo" alt="logo"/>
       <div>
-        <input className="search-box" type="text" value={searchTerm} onChange={handleSearchChange} />
+        <input className="search-box" type="text" placeholder="Search for a Pokémon" value={searchTerm} onChange={handleSearchChange} />
         <button className="search-button" onClick={() => handleSearchSubmit(searchTerm)} disabled={isLoading}>Search</button>
       </div>
       {results && results.status === '200' && (
