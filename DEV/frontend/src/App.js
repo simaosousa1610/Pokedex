@@ -13,7 +13,7 @@ function App() {
 
   const handleSearchSubmit = async (term) => {
     setIsLoading(true);
-    const response = await fetch('/api/search', { // Use relative URL
+    const response = await fetch('https://pokedex-2-1air.onrender.com/api/search', { // Use the deployed backend URL
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
