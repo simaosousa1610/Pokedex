@@ -143,10 +143,5 @@ The application includes automated tests for key features. To run the tests:
    npm test
    \`\`\`
 
-## Contact
-For any questions or clarifications, please contact:
-
-- Davide Silva: [GitHub](https://github.com/davidesilva)
-- Gabriel Poça: [GitHub](https://github.com/gabrielpoca)
 
 Feel free to reach out if you need further assistance or have any inquiries regarding the project.
