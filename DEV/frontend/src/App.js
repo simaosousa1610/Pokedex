@@ -6,6 +6,7 @@ function App() {
   const [searchTerm, setSearchTerm] = useState('');
   const [results, setResults] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
+  const [currentId, setCurrentId] = useState(null);
 
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.value);
@@ -22,19 +23,37 @@ function App() {
     });
     const data = await response.json();
     setResults(data);
+    if (data.id) {
+      setCurrentId(data.id);
+    }
     setIsLoading(false);
   };
 
   const handlePrevious = async () => {
-    const previousId = Math.max(1, Number(searchTerm) - 1);
-    setSearchTerm(String(previousId));
-    await handleSearchSubmit(String(previousId));
+    const previousId = Math.max(1, Number(currentId) - 1);
+    await handleSearchById(String(previousId));
   };
   
   const handleNext = async () => {
-    const nextId = Number(searchTerm) + 1;
-    setSearchTerm(String(nextId));
-    await handleSearchSubmit(String(nextId));
+    const nextId = Number(currentId) + 1;
+    await handleSearchById(String(nextId));
+  };
+
+  const handleSearchById = async (id) => {
+    setIsLoading(true);
+    const response = await fetch('https://pokedex-2-1air.onrender.com/api/search', { // Use the deployed backend URL
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ searchTerm: id })
+    });
+    const data = await response.json();
+    setResults(data);
+    if (data.id) {
+      setCurrentId(data.id);
+    }
+    setIsLoading(false);
   };
 
   return ( 

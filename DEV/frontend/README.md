@@ -1,70 +1,145 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Subvisual Apprenticeship Tech Challenge
 
-## Available Scripts
+## Table of Contents
+- [Introduction](#introduction)
+- [Project Structure](#project-structure)
+- [Setup Instructions](#setup-instructions)
+- [Deployment](#deployment)
+- [Usage](#usage)
+- [Technical Decisions](#technical-decisions)
+- [Automated Tests](#automated-tests)
+- [Contact](#contact)
 
-In the project directory, you can run:
+## Introduction
+This project is developed as part of the Subvisual Apprenticeship Tech Challenge. The application allows users to search for Pokémon by name, view details, and navigate between Pokémon using a "Previous" and "Next" functionality. The backend is deployed on Render, and the frontend React application is deployed on Vercel.
 
-### `npm start`
+## Project Structure
+\`\`\`
+.
+├── .gitignore
+├── DEV
+│   ├── backend
+│   │   ├── app.py
+│   │   └── requirements.txt
+│   └── frontend
+│       ├── .gitignore
+│       ├── .vercel
+│       ├── build
+│       ├── package.json
+│       ├── public
+│       ├── README.md
+│       └── src
+├── env
+│   ├── Lib
+│   │   └── site-packages
+│   ├── pyvenv.cfg
+│   └── Scripts
+│       ├── activate
+│       ├── activate.bat
+│       ├── Activate.ps1
+│       ├── corepack
+│       ├── corepack.cmd
+│       ├── create-react-app
+│       ├── create-react-app.cmd
+│       ├── create-react-app.ps1
+│       ├── deactivate.bat
+│       ├── install_tools.bat
+│       ├── nodevars.bat
+│       ├── npm
+│       ├── npm.cmd
+│       ├── npm.ps1
+│       ├── npx
+│       ├── npx.cmd
+│       ├── npx.ps1
+│       ├── serve
+│       ├── serve.cmd
+│       └── ...
+├── src
+├── package.json
+└── requirements.txt
+\`\`\`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Setup Instructions
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Backend Setup
+1. **Clone the repository**:
+   \`\`\`sh
+   git clone https://github.com/your-repo-link.git
+   cd your-repo-link/DEV/backend
+   \`\`\`
 
-### `npm test`
+2. **Create a virtual environment**:
+   \`\`\`sh
+   python -m venv env
+   source env/Scripts/activate  # On Windows
+   # source env/bin/activate    # On Unix or MacOS
+   \`\`\`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. **Install dependencies**:
+   \`\`\`sh
+   pip install -r requirements.txt
+   \`\`\`
 
-### `npm run build`
+4. **Run the backend**:
+   \`\`\`sh
+   python app.py
+   \`\`\`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Frontend Setup
+1. **Navigate to the frontend directory**:
+   \`\`\`sh
+   cd ../frontend
+   \`\`\`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. **Install dependencies**:
+   \`\`\`sh
+   npm install
+   \`\`\`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. **Run the frontend**:
+   \`\`\`sh
+   npm start
+   \`\`\`
 
-### `npm run eject`
+## Deployment
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Backend
+The backend is deployed on Render. The deployment instructions for Render can be found [here](https://render.com/docs/deploy-python).
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Frontend
+The frontend is deployed on Vercel. The deployment instructions for Vercel can be found [here](https://vercel.com/docs).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Usage
+1. **Navigate to the deployed application URL**.
+2. **Search for a Pokémon** by entering the name in the search bar.
+3. **View Pokémon details**, including name, number, and sprite.
+4. Use the **Previous** and **Next** buttons to navigate between Pokémon.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Technical Decisions
+- **React**: Chosen for the frontend due to its component-based architecture and ease of use with Vercel for deployment.
+- **Flask**: Used for the backend to handle API requests efficiently.
+- **Vercel**: Selected for its seamless integration with React applications and ease of deployment.
+- **Render**: Chosen for backend deployment due to its simplicity and support for Python applications.
 
-## Learn More
+## Automated Tests
+The application includes automated tests for key features. To run the tests:
+1. **Backend tests**:
+   \`\`\`sh
+   cd DEV/backend
+   pytest
+   \`\`\`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+2. **Frontend tests**:
+   \`\`\`sh
+   cd ../frontend
+   npm test
+   \`\`\`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Contact
+For any questions or clarifications, please contact:
 
-### Code Splitting
+- Davide Silva: [GitHub](https://github.com/davidesilva)
+- Gabriel Poça: [GitHub](https://github.com/gabrielpoca)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Feel free to reach out if you need further assistance or have any inquiries regarding the project.
