@@ -3,8 +3,12 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 import Levenshtein as levenshtein
 import requests
+import waitress
 
-app = Flask(__name__, static_folder='../build', static_url_path='/')
+
+app = Flask(__name__, static_folder='../frontend/build', static_url_path='/')
+
+
 CORS(app)  # This will enable CORS for all routes
 
 poke_data = dict()
@@ -85,4 +89,4 @@ def search():
     })
 
 if __name__ == '__main__':
-    app.run(port=5000)
+    waitress.serve(app, listen='0.0.0.0:5000')
