@@ -1,4 +1,3 @@
-
 # Subvisual Apprenticeship Tech Challenge
 
 ## Table of Contents
@@ -119,8 +118,14 @@ The frontend is deployed on Vercel. The deployment instructions for Vercel can b
 ## Technical Decisions
 - **React**: Chosen for the frontend due to its component-based architecture and ease of use with Vercel for deployment.
 - **Flask**: Used for the backend to handle API requests efficiently.
+- **Levenshtein**: Employed for fuzzy search functionality to provide suggestions for Pokémon names.
+- **flask_cors**: Utilized to enable cross-origin resource sharing between the frontend and backend.
 - **Vercel**: Selected for its seamless integration with React applications and ease of deployment.
 - **Render**: Chosen for backend deployment due to its simplicity and support for Python applications.
+- **PokeAPI**: Utilized to fetch Pokémon data for the application.
+- **Pytest**: Used for backend testing to ensure the reliability of the application.
+- **Jest**: Employed for frontend testing to verify the functionality of the application.
+- **React Router**: Utilized for navigation between Pokémon details.
 
 ## Automated Tests
 The application includes automated tests for key features. To run the tests:
