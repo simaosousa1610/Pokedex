@@ -31,3 +31,5 @@ yarn.lock
 *.tmp
 *.bak
 *.swp
+
+__pycache__
