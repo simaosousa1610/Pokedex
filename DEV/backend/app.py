@@ -1,13 +1,11 @@
-
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 import Levenshtein as levenshtein
 import requests
+import os
 import waitress
 
-
 app = Flask(__name__, static_folder='../frontend/build', static_url_path='/')
-
 
 CORS(app)  # This will enable CORS for all routes
 
@@ -89,4 +87,5 @@ def search():
     })
 
 if __name__ == '__main__':
-    app.run(debug=True, port=10000)
+    port = int(os.environ.get('PORT', 10000))  # Use the PORT environment variable or default to 10000
+    waitress.serve(app, port=port)  # Use Waitress to serve the app
