@@ -4,7 +4,6 @@
 
 ## Table of Contents
 - [Introduction](#introduction)
-- [Project Structure](#project-structure)
 - [Setup Instructions](#setup-instructions)
 - [Deployment](#deployment)
 - [Usage](#usage)
@@ -14,52 +13,6 @@
 
 ## Introduction
 This project is developed as part of the Subvisual Apprenticeship Tech Challenge. The application allows users to search for Pokémon by name, view details, and navigate between Pokémon using a "Previous" and "Next" functionality. The backend is deployed on Render, and the frontend React application is deployed on Vercel.
-
-## Project Structure
-\`\`\`
-.
-├── .gitignore
-├── DEV
-│   ├── backend
-│   │   ├── app.py
-│   │   └── requirements.txt
-│   └── frontend
-│       ├── .gitignore
-│       ├── .vercel
-│       ├── build
-│       ├── package.json
-│       ├── public
-│       ├── README.md
-│       └── src
-├── env
-│   ├── Lib
-│   │   └── site-packages
-│   ├── pyvenv.cfg
-│   └── Scripts
-│       ├── activate
-│       ├── activate.bat
-│       ├── Activate.ps1
-│       ├── corepack
-│       ├── corepack.cmd
-│       ├── create-react-app
-│       ├── create-react-app.cmd
-│       ├── create-react-app.ps1
-│       ├── deactivate.bat
-│       ├── install_tools.bat
-│       ├── nodevars.bat
-│       ├── npm
-│       ├── npm.cmd
-│       ├── npm.ps1
-│       ├── npx
-│       ├── npx.cmd
-│       ├── npx.ps1
-│       ├── serve
-│       ├── serve.cmd
-│       └── ...
-├── src
-├── package.json
-└── requirements.txt
-\`\`\`
 
 ## Setup Instructions
 
@@ -74,7 +27,7 @@ This project is developed as part of the Subvisual Apprenticeship Tech Challenge
    \`\`\`sh
    python -m venv env
    source env/Scripts/activate  # On Windows
-   # source env/bin/activate    # On Unix or MacOS
+   source env/bin/activate    # On Unix or MacOS
    \`\`\`
 
 3. **Install dependencies**:
