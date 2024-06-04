@@ -18,43 +18,38 @@ This project is developed as part of the Subvisual Apprenticeship Tech Challenge
 
 ### Backend Setup
 1. **Clone the repository**:
-   \`\`\`sh
+
    git clone https://github.com/your-repo-link.git
    cd your-repo-link/DEV/backend
-   \`\`\`
 
 2. **Create a virtual environment**:
-   \`\`\`sh
+
    python -m venv env
    source env/Scripts/activate  # On Windows
    source env/bin/activate    # On Unix or MacOS
-   \`\`\`
 
 3. **Install dependencies**:
-   \`\`\`sh
+
    pip install -r requirements.txt
-   \`\`\`
+
 
 4. **Run the backend**:
-   \`\`\`sh
+
    python app.py
-   \`\`\`
+
 
 ### Frontend Setup
 1. **Navigate to the frontend directory**:
-   \`\`\`sh
+
    cd ../frontend
-   \`\`\`
 
 2. **Install dependencies**:
-   \`\`\`sh
+
    npm install
-   \`\`\`
 
 3. **Run the frontend**:
-   \`\`\`sh
+
    npm start
-   \`\`\`
 
 ## Deployment
 
@@ -85,16 +80,13 @@ The frontend is deployed on Vercel. The deployment instructions for Vercel can b
 ## Automated Tests
 The application includes automated tests for key features. To run the tests:
 1. **Backend tests**:
-   \`\`\`sh
+
    cd DEV/backend
    python pytest
-   \`\`\`
 
 2. **Frontend tests**:
-   \`\`\`sh
+
    cd ../frontend
    npm test
-   \`\`\`
-
 
 Feel free to reach out if you need further assistance or have any inquiries regarding the project.
